@@ -8,15 +8,47 @@
     {% else %}{{ site.title | escape }}{% endif %}
   </title>
 
-  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  <meta name="description"
+    content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
-  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <!-- Search engine SEO meta tags -->
+  <meta name="keywords"
+    content="Garden Guys,Indoor gardening,outdoor gardening,balcony gardens,houseplants, 
+    garden design,garden experts,Garden specialists,plant care,garden installation,landscaping services, garden service in Lucknow, Lucknow" />
+  <meta name="description" content="Transform your indoor and outdoor space with Garden Guys.
+  Expert garden and design specialists creating beautiful balcony and indoor gardens.
+   Contact us today." />
+  <meta name="author" content="Garden Guys" />
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@gardenguysin" />
+  <meta name="twitter:title" content="Garden Guys" />
+  <meta name="twitter:description" content="Garden Guys. Garden design and Landscaping service company." />
+  <meta name="twitter:image" content="https://gardenguys.in/assets/img/service1.jpg" />
+  <meta name="twitter:creator" content="@gardenguysin" />
+  <!-- Facebook and other social media card -->
+  <meta name="og:title" property="og:title" content="Garden Guys" />
+  <meta name="og:url" property="og:url" content="https://gardenguys.in" />
+  <meta name="og:type" property="og:type" content="website" />
+  <meta name="og:description" property="og:description"
+    content="Garden Guys. Garden design and Landscaping service company." />
+  <meta name="og:image" property="og:image" content="https://gardenguys.in/assets/img/service1.jpg" />
+  <!-- meta tags for indexing on search engine -->
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+    type='text/css'>
+  <link
+    href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+    rel='stylesheet' type='text/css'>
 
   <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
 
-  <link rel="stylesheet" href="{{"/assets/main.css" | relative_url }}">
+  <link rel="stylesheet" href="{{" /assets/main.css" | relative_url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ " /feed.xml" |
+    relative_url }}">
 
 </head>

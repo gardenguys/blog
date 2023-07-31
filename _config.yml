@@ -1,19 +1,20 @@
-title:              Clean Blog
-email:              your-email@example.com
-description:        A Blog Theme by Start Bootstrap
-author:             Start Bootstrap
-baseurl:            "/startbootstrap-clean-blog-jekyll"
-url:                "https://startbootstrap.github.io"
+title:              Garden Guys
+email:              info@gardenguys.in
+formspreeid:        mqkoonje
+description:        Green tips for your garden paradise.
+author:             Garden Guys
+baseurl:            "/blog"
+url:                "https://gardenguys.in/blog"
 
 # Social Profiles
-twitter_username:   SBootstrap
-github_username:    StartBootstrap
-facebook_username:  StartBootstrap
-instagram_username:  
+twitter_username:   gardenguysin
+github_username:    
+facebook_username:  gardenguys.in
+instagram_username:  gardenguys.in
 linkedin_username:
 
 # Add your google-analytics ID here to activate google analytics
-google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
+google_analytics:   G-6BPN9Q43PB # out your google-analytics code
 
 # Build settings
 markdown:           kramdown
