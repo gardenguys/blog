@@ -30,30 +30,36 @@ layout: default
         {{ content }}
 
         <!-- Home Post List -->
-        {% for post in site.posts limit : 5 %}
-
-        <article class="post-preview">
-          <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-            <h2 class="post-title">{{ post.title }}</h2>
-            {% if post.subtitle %}
-            <h3 class="post-subtitle">{{ post.subtitle }}</h3>
-            {% else %}
-            <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
-            {% endif %}
-          </a>
-          <p class="post-meta">Posted by
-            {% if post.author %}
-            {{ post.author }}
-            {% else %}
-            {{ site.author }}
-            {% endif %}
-            on
-            {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
-          </p>
-        </article>
-
-        <hr>
-
+        {% for post in site.posts limit: 5 %}
+        <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" class="text-dark text-decoration-none">
+          <article class="post-preview my-3" style="clear: both; border: 1px solid #ddd; border-radius: 10px; padding: 15px;">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="article-image d-md-none" style="background-size: cover; background-repeat: no-repeat; background-image: url('{{ post.background | prepend: site.baseurl | replace: '//', '/' }}'); border-radius: 8px; height: 200px;"></div>
+                <div class="article-image d-none d-md-block" style="width: 200px; height: 200px; background-size: cover; background-repeat: no-repeat; background-image: url('{{ post.background | prepend: site.baseurl | replace: '//', '/' }}'); border-radius: 8px;"></div>
+              </div>
+              <div class="col-md-8">
+                <div class="article-content">
+                  <h2 class="post-title">{{ post.title }}</h2>
+                  {% if post.subtitle %}
+                  <h4 class="post-subtitle text-muted">{{ post.subtitle }}</h4>
+                  {% else %}
+                  <h4 class="post-subtitle text-muted">{{ post.excerpt | strip_html | truncatewords: 15 }}</h4>
+                  {% endif %}
+                  <p class="post-meta">Posted by
+                    {% if post.author %}
+                    {{ post.author }}
+                    {% else %}
+                    {{ site.author }}
+                    {% endif %}
+                    on
+                    {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </a>
         {% endfor %}
 
         <!-- Pager -->
